@@ -32,7 +32,7 @@ function Card(props) {
             </>
           )}
         </button>
-        <div className="py-2 px-3 text-sm font-medium text-center text-red-800 hover:underline cursor-pointer">
+        <div onClick={() => props.setDelete(props.data)} className="py-2 px-3 text-sm font-medium text-center text-red-800 hover:underline cursor-pointer">
           Delete
         </div>
       </div>

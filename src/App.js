@@ -12,14 +12,21 @@ class App extends Component {
     };
 
     this.handleArchive = this.handleArchive.bind(this);
-    // this.handleDelete = this.handleDelete.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
   // Handle Archive Function
   handleArchive(data) {
     data.archived ? data.archived = false : data.archived = true;
     this.setState([...this.state.initialData, data]);
   }
-  
+
+  // Handle Delete Function
+  handleDelete(data) {
+    this.setState({
+      initialData: this.state.initialData.filter((item) => item.id !== data.id),
+    });
+  }
+
   render() {
     return (
       <>
@@ -34,12 +41,14 @@ class App extends Component {
               title="Notes"
               isArchived={false}
               archive={this.handleArchive}
+              deleteNote={this.handleDelete}
             />
             <CardList
               data={this.state.initialData}
               title="Archive"
               isArchived={true}
               archive={this.handleArchive}
+              deleteNote={this.handleDelete}
             />
           </div>
         </section>
