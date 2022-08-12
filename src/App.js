@@ -27,8 +27,8 @@ class App extends Component {
             <div className="mx-auto">Form Here</div>
           </div>
           <div className="flex flex-col md:flex-row w-full px-8 justify-between gap-x-2">
-            <CardList title="Notes"/>
-            <CardList title="Archive"/>
+            <CardList data={this.state.initialData} title="Notes" isArchived={false}/>
+            <CardList data={this.state.initialData} title="Archive" isArchived={true}/>
           </div>
         </section>
       </>
