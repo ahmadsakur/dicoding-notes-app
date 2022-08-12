@@ -1,6 +1,6 @@
 import React from "react";
 import { Search } from "../utils/icons";
-function Header() {
+function Header(props) {
   return (
     <section className="w-full px-8 text-gray-700 bg-white">
       <div className="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
@@ -14,7 +14,7 @@ function Header() {
             </span>
           </a>
         </div>
-        <div className="ml-5 w-1/2 md:w-1/3 lg:justify-end">
+        <div className="w-full sm:w-1/3 lg:justify-end">
           <div className="relative">
             <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               <Search />
@@ -23,7 +23,7 @@ function Header() {
               type="search"
               className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Search Notes"
-              required
+              onChange={props.handleSearch}
             />
           </div>
         </div>

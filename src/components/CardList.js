@@ -6,7 +6,7 @@ function CardList(props) {
   const notesData = data.filter((item) => item.archived === isArchived);
   return (
     <div className="w-full md:w-1/2">
-      <div className="mx-auto text-xl font-black leading-tight text-gray-900 text-center md:my-2">
+      <div className="mx-auto text-xl font-black leading-tight text-gray-900 text-center md:my-2 border-b-2 p-2">
         {title}
       </div>
       <div className="flex flex-row gap-2 flex-wrap justify-around mt-3">
