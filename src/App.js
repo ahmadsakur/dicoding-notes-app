@@ -55,7 +55,7 @@ class App extends Component {
         <Header handleSearch={this.handleSearch} />
         <section className="w-full px-8 text-gray-700 bg-white">
           <div className="container flex items-center justify-center mx-auto">
-            <Form onSubmit={this.handleSubmit}/>
+            <Form onSubmit={this.handleSubmit} />
           </div>
         </section>
         <section className="w-full sm:px-8 text-gray-700 bg-white">
@@ -77,6 +77,9 @@ class App extends Component {
             />
           </div>
         </section>
+        <div className="container w-full text-center mb-2 mt-5 px-8  text-sm font-medium text-gray-500">
+          2022 | Ahmad Sakur
+        </div>
       </>
     );
   }

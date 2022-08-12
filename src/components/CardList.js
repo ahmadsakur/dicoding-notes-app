@@ -20,8 +20,8 @@ function CardList(props) {
             />
           ))
         ) : (
-          <div className="mx-auto text-xl font-black leading-tight text-gray-900 text-center md:my-2">
-            No Notes to be found, start creating one!
+          <div className="mx-auto text-xl font-medium leading-tight text-gray-900 text-center md:my-2">
+            {isArchived ? "No archived notes" : "No notes"}
           </div>
         )}
       </div>
