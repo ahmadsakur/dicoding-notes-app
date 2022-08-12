@@ -12,7 +12,7 @@ function Archive() {
       viewBox="0 0 331.533 331.533"
       style={{ enableBackground: "new 0 0 331.533 331.533" }}
       xmlSpace="preserve"
-      class="mr-2 w-4 h-4 fill-current text-white"
+      className="mr-2 w-4 h-4 fill-current text-white"
     >
       <path
         id="XMLID_589_"
@@ -38,7 +38,7 @@ function Notes() {
       y="0px"
       viewBox="0 0 340.731 340.731"
       style={{ enableBackground: "new 0 0 340.731 340.731" }}
-      class="mr-2 w-4 h-4 fill-current text-white"
+      className="mr-2 w-4 h-4 fill-current text-white"
       xmlSpace="preserve"
     >
       <g>

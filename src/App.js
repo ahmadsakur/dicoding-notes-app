@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Card from "./components/Card";
 import CardList from "./components/CardList";
 import Header from "./components/Header";
-import { getInitialData, showFormattedDate } from "./utils";
+import { getInitialData } from "./utils";
 
 class App extends Component {
   constructor(props) {
@@ -10,14 +9,17 @@ class App extends Component {
 
     this.state = {
       initialData: getInitialData(),
-      // query: []
     };
 
-    // this.handleSearch = this.handleSearch.bind(this);
-    // this.handleSubmitValue = this.handleSubmitValue.bind(this);
+    this.handleArchive = this.handleArchive.bind(this);
     // this.handleDelete = this.handleDelete.bind(this);
-    // this.handleArchive = this.handleArchive.bind(this);
   }
+  // Handle Archive Function
+  handleArchive(data) {
+    data.archived ? data.archived = false : data.archived = true;
+    this.setState([...this.state.initialData, data]);
+  }
+  
   render() {
     return (
       <>
@@ -27,8 +29,18 @@ class App extends Component {
             <div className="mx-auto">Form Here</div>
           </div>
           <div className="flex flex-col md:flex-row w-full px-8 justify-between gap-x-2">
-            <CardList data={this.state.initialData} title="Notes" isArchived={false}/>
-            <CardList data={this.state.initialData} title="Archive" isArchived={true}/>
+            <CardList
+              data={this.state.initialData}
+              title="Notes"
+              isArchived={false}
+              archive={this.handleArchive}
+            />
+            <CardList
+              data={this.state.initialData}
+              title="Archive"
+              isArchived={true}
+              archive={this.handleArchive}
+            />
           </div>
         </section>
       </>
